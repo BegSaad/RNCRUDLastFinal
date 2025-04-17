@@ -42,7 +42,8 @@ const AddUser = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isMarried, setIsMarried] = useState(userData?.isMarried || false);
 
-  const validationSchema = Yup.object().shape({
+  const validationSchema = Yup.object().shape({// ye sab use kiya hai validation ke liye
+    
     name: Yup.string()
       .matches(/^[A-Za-z ]+$/, 'Only alphabets are allowed')
       .required('Name is required'),
