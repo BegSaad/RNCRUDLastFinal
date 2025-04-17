@@ -43,7 +43,7 @@ const AddUser = () => {
   const [isMarried, setIsMarried] = useState(userData?.isMarried || false);
 
   const validationSchema = Yup.object().shape({// ye sab use kiya hai validation ke liye
-    
+
     name: Yup.string()
       .matches(/^[A-Za-z ]+$/, 'Only alphabets are allowed')
       .required('Name is required'),
@@ -84,7 +84,7 @@ const AddUser = () => {
         <Formik
           initialValues={{
             name: userData?.name || '',
-            dob: userData?.dob || '',
+            dob: userData?.dob || '',  //ye sab formik use kiya hai
             age: userData?.age || ageGroups[0],
             address: userData?.address || '',
           }}
